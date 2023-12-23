@@ -14,19 +14,24 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   --
-  -- My plugins here
+  -- Plugins
   --
-  -- telescope file explorer
+
+  -- telescope: file explorer
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- jellybeans color scheme
+  -- jellybeans: color scheme
   use({ 'nanotech/jellybeans.vim' })
 
-  -- treesitter
+  -- treesitter: code syntax highlighter
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+
+  -- fugitive
+  use 'tpope/vim-fugitive'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
