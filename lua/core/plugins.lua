@@ -41,24 +41,12 @@ return require('packer').startup(function(use)
     },
   }
 
-  -- LSP
+  -- Mason for managing LSP servers, linters, etc.
+  use 'williamboman/mason.nvim'
 
-  -- nvim-lspconfig: LSP support
+  -- LSP configuration
   use 'neovim/nvim-lspconfig'
-  -- null-ls: Integrating with tools like Prettier
-  use 'jose-elias-alvarez/null-ls.nvim'
-  -- lspkind-nvim: Icons for completion menu
-  use 'onsails/lspkind-nvim'
-  -- cmp: Completion Framework
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  -- Show function signatures
-  use 'ray-x/lsp_signature.nvim'
-  -- LSP UIs
-  use 'glepnir/lspsaga.nvim'
+
 
 
 
