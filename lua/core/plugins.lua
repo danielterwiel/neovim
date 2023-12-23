@@ -17,31 +17,48 @@ return require('packer').startup(function(use)
   -- Plugins
   --
 
-  -- telescope: file explorer
+  -- telescope: File explorer
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- jellybeans: color scheme
+  -- jellybeans: Color scheme
   use({ 'nanotech/jellybeans.vim' })
 
-  -- treesitter: code syntax highlighter
+  -- treesitter: Code syntax highlighter
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 
-  -- fugitive
+  -- fugitive: Git
   use 'tpope/vim-fugitive'
 
-  -- nvim-tree
+  -- nvim-tree: File explorer
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'kyazdani42/nvim-web-devicons', -- file icons
     },
-    tag = 'nightly' -- optional, updated every night
   }
 
+  -- LSP
+
+  -- nvim-lspconfig: LSP support
+  use 'neovim/nvim-lspconfig'
+  -- null-ls: Integrating with tools like Prettier
+  use 'jose-elias-alvarez/null-ls.nvim'
+  -- lspkind-nvim: Icons for completion menu
+  use 'onsails/lspkind-nvim'
+  -- cmp: Completion Framework
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  -- Show function signatures
+  use 'ray-x/lsp_signature.nvim'
+  -- LSP UIs
+  use 'glepnir/lspsaga.nvim'
 
 
 
