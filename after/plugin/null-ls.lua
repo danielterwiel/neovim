@@ -6,10 +6,6 @@ local on_attach = function(client, bufnr)
     -- Mappings.
     local opts = { noremap=true, silent=true }
 
-    -- Disable built-in LSP formatting
-    -- client.server_capabilities.document_formatting = false
-    -- client.server_capabilities.document_range_formatting = false
-
     -- Keymap for formatting with Prettier via null-ls
     buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
 end
