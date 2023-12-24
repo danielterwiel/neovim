@@ -41,11 +41,16 @@ return require('packer').startup(function(use)
     },
   }
 
-  -- Mason for managing LSP servers, linters, etc.
+  -- mason: managing LSP servers, linters, etc.
   use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 
-  -- LSP configuration
+  -- lspconfig: LSP configuration
   use 'neovim/nvim-lspconfig'
+
+  -- null-ls: LSP integration for prettier
+  use 'jose-elias-alvarez/null-ls.nvim'
+
 
 
 

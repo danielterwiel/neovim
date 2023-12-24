@@ -20,6 +20,12 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   local opts = { noremap=true, silent=true }
+
+  --if client.server_capabilities.documentFormattingProvider then
+    -- print('yaaaaay')
+    buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
+  -- end
+
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
@@ -28,4 +34,3 @@ lspconfig.tsserver.setup{ on_attach = on_attach }
 lspconfig.cssls.setup{ on_attach = on_attach }
 lspconfig.html.setup{ on_attach = on_attach }
 lspconfig.jsonls.setup{ on_attach = on_attach }
-
