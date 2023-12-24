@@ -1,20 +1,5 @@
 local lspconfig = require('lspconfig')
 
--- Installed through mason:
---
--- commitlint
--- css-lsp
--- eslint-lsp
--- graphql-language-service-cli
--- htmlhint
--- json-lsp
--- jsonlint
--- markdownlint
--- prettier
--- rust-analyzer
--- tailwindcss-language-server
--- typescript-language-server
-
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
