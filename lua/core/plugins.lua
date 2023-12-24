@@ -43,7 +43,6 @@ return require('packer').startup(function(use)
 
   -- mason: managing LSP servers, linters, etc.
   use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
 
   -- lspconfig: LSP configuration
   use 'neovim/nvim-lspconfig'
