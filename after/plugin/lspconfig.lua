@@ -15,19 +15,6 @@ local lspconfig = require('lspconfig')
 -- tailwindcss-language-server
 -- typescript-language-server
 
--- JavaScript and TypeScript
-lspconfig.tsserver.setup{}
-
--- CSS, SCSS
-lspconfig.cssls.setup{}
-
--- HTML
-lspconfig.html.setup{}
-
--- JSON
-lspconfig.jsonls.setup{}
-
-
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
@@ -35,11 +22,10 @@ local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=true }
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  -- Add more keybindings as needed
 end
 
--- Add on_attach to LSP setup
 lspconfig.tsserver.setup{ on_attach = on_attach }
 lspconfig.cssls.setup{ on_attach = on_attach }
--- TODO: Repeat for other LSPs
+lspconfig.html.setup{ on_attach = on_attach }
+lspconfig.jsonls.setup{ on_attach = on_attach }
 
