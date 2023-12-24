@@ -1,11 +1,23 @@
 local null_ls = require('null-ls')
 
-null_ls.setup({
-  sources = {
-    null_ls.builtins.formatting.prettier.with({
-      extra_args = { "--single-quote", "--jsx-single-quote" },
-    }),
-    -- other formatters or linters...
-  },
-})
+local on_attach = function(client, bufnr)
+    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
+    -- Mappings.
+    local opts = { noremap=true, silent=true }
+
+    -- Disable built-in LSP formatting
+    -- client.server_capabilities.document_formatting = false
+    -- client.server_capabilities.document_range_formatting = false
+
+    -- Keymap for formatting with Prettier via null-ls
+    buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', opts)
+end
+
+
+null_ls.setup({
+  on_attach = on_attach,
+    sources = {
+        null_ls.builtins.formatting.prettier,
+    },
+})
