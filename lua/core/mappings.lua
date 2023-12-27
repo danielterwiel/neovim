@@ -16,7 +16,6 @@ vim.api.nvim_set_keymap("x", "<A-k>", ":move '<-2<CR>gv=gv", { noremap = true, s
 vim.api.nvim_set_keymap("n", "<C-d>", "<A-S-d>", { noremap = true, silent = true })
 
 -- map ctrl+d to vim-visual-multi to select next occurence of selection
-
 vim.g.VM_maps = {
 	["Find Under"] = "<C-d>",
 	["Find Subword Under"] = "<C-d>",
