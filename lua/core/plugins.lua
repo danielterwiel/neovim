@@ -27,8 +27,11 @@ return require("packer").startup(function(use)
 	-- jellybeans: Color scheme
 	use({ "nanotech/jellybeans.vim" })
 
-	-- treesitter: Code syntax highlighter 
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" }) fugitive: Git use("tpope/vim-fugitive")
+	-- treesitter: Code syntax highlighter
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+
+	-- fugitive: Git
+	use("tpope/vim-fugitive")
 
 	-- nvim-tree: File explorer
 	use({
