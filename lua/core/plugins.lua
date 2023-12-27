@@ -31,7 +31,14 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	-- fugitive: Git
-	use("tpope/vim-fugitive")
+	use("tpope/vim-fugitive") -- Git commands in nvim
+	use({
+		"lewis6991/gitsigns.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("gitsigns").setup()
+		end,
+	})
 
 	-- nvim-tree: File explorer
 	use({
