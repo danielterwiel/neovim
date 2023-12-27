@@ -28,8 +28,7 @@ return require("packer").startup(function(use)
 	-- use("dracula/vim")
 
 	-- vim-colors-solarized: Solarized theme
-	use 'altercation/vim-colors-solarized'
-
+	use("altercation/vim-colors-solarized")
 
 	-- treesitter: Code syntax highlighter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
