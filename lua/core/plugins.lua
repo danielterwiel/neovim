@@ -17,6 +17,12 @@ return require("packer").startup(function(use)
 	-- Plugins
 	--
 
+	-- vim-colors-solarized: Solarized theme
+	use("altercation/vim-colors-solarized")
+
+	-- treesitter: Code syntax highlighter
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+
 	-- telescope: File explorer
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -24,17 +30,20 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	-- vim-colors-solarized: Solarized theme
-	use("altercation/vim-colors-solarized")
-
-	-- treesitter: Code syntax highlighter
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-	
 	-- lualine: Status line
 	use("nvim-lualine/lualine.nvim")
 
 	-- bufferline: Tab line
-	use("akinsho/bufferline.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+
+	-- nvim-tree: File explorer
+	use({
+		"kyazdani42/nvim-tree.lua",
+		requires = {
+			-- file icons
+			"kyazdani42/nvim-web-devicons",
+		},
+	})
 
 	-- fugitive: Git
 	use("tpope/vim-fugitive") -- Git commands in nvim
@@ -48,13 +57,12 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- nvim-tree: File explorer
+	-- Comment: easy commenting
 	use({
-		"kyazdani42/nvim-tree.lua",
-		requires = {
-			-- file icons
-			"kyazdani42/nvim-web-devicons",
-		},
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
 	})
 
 	-- mason: managing LSP servers, linters, etc.
