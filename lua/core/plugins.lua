@@ -27,11 +27,8 @@ return require("packer").startup(function(use)
 	-- jellybeans: Color scheme
 	use({ "nanotech/jellybeans.vim" })
 
-	-- treesitter: Code syntax highlighter
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-
-	-- fugitive: Git
-	use("tpope/vim-fugitive")
+	-- treesitter: Code syntax highlighter 
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" }) fugitive: Git use("tpope/vim-fugitive")
 
 	-- nvim-tree: File explorer
 	use({
@@ -49,6 +46,9 @@ return require("packer").startup(function(use)
 
 	-- null-ls: LSP integration for prettier
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	-- vim-visual-multi: mutli-cursor functionality
+	use("mg979/vim-visual-multi")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
