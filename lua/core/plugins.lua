@@ -37,7 +37,8 @@ return require("packer").startup(function(use)
 	use({
 		"kyazdani42/nvim-tree.lua",
 		requires = {
-			"kyazdani42/nvim-web-devicons", -- file icons
+			-- file icons
+			"kyazdani42/nvim-web-devicons",
 		},
 	})
 
@@ -49,6 +50,15 @@ return require("packer").startup(function(use)
 
 	-- null-ls: LSP integration for prettier
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	use("hrsh7th/nvim-cmp") -- Autocompletion plugin
+	use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
+	use("hrsh7th/cmp-buffer") -- Buffer completions
+	use("hrsh7th/cmp-path") -- Path completions
+	use("hrsh7th/cmp-cmdline") -- Command line completions
+	use("hrsh7th/cmp-vsnip") -- Snippet completions
+	use("hrsh7th/vim-vsnip") -- Snippet engine
+	use("onsails/lspkind-nvim") -- Adds vscode-like pictograms to nvim-cmp
 
 	-- vim-visual-multi: mutli-cursor functionality
 	use("mg979/vim-visual-multi")
