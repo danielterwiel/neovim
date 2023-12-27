@@ -24,14 +24,17 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	-- dracula: Dracula theme
-	-- use("dracula/vim")
-
 	-- vim-colors-solarized: Solarized theme
 	use("altercation/vim-colors-solarized")
 
 	-- treesitter: Code syntax highlighter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	
+	-- lualine: Status line
+	use("nvim-lualine/lualine.nvim")
+
+	-- bufferline: Tab line
+	use("akinsho/bufferline.nvim")
 
 	-- fugitive: Git
 	use("tpope/vim-fugitive") -- Git commands in nvim
