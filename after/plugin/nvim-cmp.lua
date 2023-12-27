@@ -6,6 +6,7 @@ cmp.setup({
 			vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
 		end,
 	},
+	mapping = require("cmp").mapping.preset.cmdline(),
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -14,6 +15,7 @@ cmp.setup({
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	}),
 	sources = cmp.config.sources({
+		{ name = "cmdline" },
 		{ name = "nvim_lsp" },
 		{ name = "nvim-cmp" },
 		{ name = "cmp-nvim-lsp" },
@@ -28,5 +30,17 @@ cmp.setup({
 	}),
 	formatting = {
 		format = require("lspkind").cmp_format({ with_text = true, maxwidth = 50 }),
+	},
+	view = {
+		entries = { name = "custom", selection_order = "near_cursor" },
+	},
+	window = {
+		-- Add borders to the completion menu
+		completion = {
+			border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
+		},
+		documentation = {
+			border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
+		},
 	},
 })

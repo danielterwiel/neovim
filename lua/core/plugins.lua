@@ -24,14 +24,20 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	-- jellybeans: Color scheme
-	use({ "nanotech/jellybeans.vim" })
+	-- dracula: Dracula theme
+	-- use("dracula/vim")
+
+	-- vim-colors-solarized: Solarized theme
+	use 'altercation/vim-colors-solarized'
+
 
 	-- treesitter: Code syntax highlighter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	-- fugitive: Git
 	use("tpope/vim-fugitive") -- Git commands in nvim
+
+	-- gitsigns: Git status
 	use({
 		"lewis6991/gitsigns.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
@@ -58,6 +64,7 @@ return require("packer").startup(function(use)
 	-- null-ls: LSP integration for prettier
 	use("jose-elias-alvarez/null-ls.nvim")
 
+	-- nvm-cmp: Autocomplete
 	use("hrsh7th/nvim-cmp") -- Autocompletion plugin
 	use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
 	use("hrsh7th/cmp-buffer") -- Buffer completions

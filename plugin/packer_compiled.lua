@@ -105,11 +105,6 @@ _G.packer_plugins = {
     path = "/Users/dani/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["jellybeans.vim"] = {
-    loaded = true,
-    path = "/Users/dani/.local/share/nvim/site/pack/packer/start/jellybeans.vim",
-    url = "https://github.com/nanotech/jellybeans.vim"
-  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/dani/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -164,6 +159,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dani/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-colors-solarized"] = {
+    loaded = true,
+    path = "/Users/dani/.local/share/nvim/site/pack/packer/start/vim-colors-solarized",
+    url = "https://github.com/altercation/vim-colors-solarized"
   },
   ["vim-fugitive"] = {
     loaded = true,
