@@ -45,8 +45,11 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	-- fugitive: Git
-	use("tpope/vim-fugitive") -- Git commands in nvim
+	-- fugitive: Git commands
+	use("tpope/vim-fugitive")
+
+	-- vim-surround: Surround text with quotes, brackets, etc.
+	use("tpope/vim-surround")
 
 	-- gitsigns: Git status
 	use({
@@ -77,7 +80,7 @@ return require("packer").startup(function(use)
 	use("onsails/lspkind-nvim") -- Adds vscode-like pictograms to nvim-cmp
 
 	-- copilot: GitHub Copilot
-	use 'github/copilot.vim'
+	use("github/copilot.vim")
 
 	-- Comment: easy commenting
 	use({
