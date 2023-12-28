@@ -57,14 +57,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- Comment: easy commenting
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	})
-
 	-- mason: managing LSP servers, linters, etc.
 	use("williamboman/mason.nvim")
 
@@ -84,8 +76,25 @@ return require("packer").startup(function(use)
 	use("hrsh7th/vim-vsnip") -- Snippet engine
 	use("onsails/lspkind-nvim") -- Adds vscode-like pictograms to nvim-cmp
 
+	-- Comment: easy commenting
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+
 	-- vim-visual-multi: mutli-cursor functionality
 	use("mg979/vim-visual-multi")
+
+	-- which-key: vim cheatsheet
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
