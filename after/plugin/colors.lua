@@ -70,33 +70,33 @@ vim.cmd([[
 vim.cmd([[
   " Active buffer
   highlight BufferLineBufferSelected guifg=#93a1a1 guibg=#002b36
-
-  " Inactive buffer
-  highlight BufferLineBuffer guifg=#586e75 guibg=#073642
-
-  " Buffer separators, modified background to match Solarized Dark
+  
+  " Inactive buffer - Using more subtle colors
+  highlight BufferLineBuffer guifg=#657b83 guibg=#002b36
+  
+  " Buffer separators
   highlight BufferLineSeparator guifg=#073642 guibg=#002b36
-
-  " Bufferline background
-  highlight BufferLineBackground guifg=#586e75 guibg=#002b36
-
+  
+  " Bufferline background - Solarized dark
+  highlight BufferLineBackground guifg=#657b83 guibg=#002b36
+  
   " Close buttons
-  highlight BufferLineCloseButton guifg=#586e75 guibg=#002b36
-  highlight BufferLineCloseButtonVisible guifg=#586e75 guibg=#073642
+  highlight BufferLineCloseButton guifg=#657b83 guibg=#002b36
+  highlight BufferLineCloseButtonVisible guifg=#657b83 guibg=#002b36
   highlight BufferLineCloseButtonSelected guifg=#93a1a1 guibg=#002b36
-
+  
   " Modified buffer indicator
-  highlight BufferLineModified guifg=#b58900 guibg=#073642
-  highlight BufferLineModifiedVisible guifg=#b58900 guibg=#073642
-  highlight BufferLineModifiedSelected guifg=#b58900 guibg=#002b36
-
+  highlight BufferLineModified guifg=#cb4b16 guibg=#002b36
+  highlight BufferLineModifiedVisible guifg=#cb4b16 guibg=#002b36
+  highlight BufferLineModifiedSelected guifg=#cb4b16 guibg=#002b36
+  
   " Tab indicators
-  highlight BufferLineTab guifg=#586e75 guibg=#073642
+  highlight BufferLineTab guifg=#657b83 guibg=#002b36
   highlight BufferLineTabSelected guifg=#93a1a1 guibg=#002b36
   highlight BufferLineTabClose guifg=#dc322f guibg=#002b36
-
+  
   " Numbers and indicators
   highlight BufferLineIndicatorSelected guifg=#2aa198 guibg=#002b36
-  highlight BufferLineNumbers guifg=#586e75 guibg=#073642
+  highlight BufferLineNumbers guifg=#657b83 guibg=#002b36
   highlight BufferLineNumbersSelected guifg=#93a1a1 guibg=#002b36
 ]])
