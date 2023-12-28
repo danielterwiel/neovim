@@ -100,3 +100,24 @@ vim.cmd([[
   highlight BufferLineNumbers guifg=#657b83 guibg=#002b36
   highlight BufferLineNumbersSelected guifg=#93a1a1 guibg=#002b36
 ]])
+
+-- Gitsigns color configuration for Solarized Dark
+vim.cmd([[
+  " GitSigns Unchanged
+  highlight SignColumn guibg=#002b36
+
+  " GitSigns Add
+  highlight GitSignsAdd guifg=#859900 guibg=#002b36
+
+  " GitSigns Change
+  highlight GitSignsChange guifg=#b58900 guibg=#002b36
+
+  " GitSigns Delete
+  highlight GitSignsDelete guifg=#dc322f guibg=#002b36
+
+  " GitSigns Top Delete (for changed lines at the top of the file)
+  highlight GitSignsDeleteTop guifg=#dc322f guibg=#002b36
+
+  " GitSigns Change Delete (for lines that have been changed and deleted)
+  highlight GitSignsChangeDelete guifg=#cb4b16 guibg=#002b36
+]])
