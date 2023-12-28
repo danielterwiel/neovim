@@ -121,3 +121,30 @@ vim.cmd([[
   " GitSigns Change Delete (for lines that have been changed and deleted)
   highlight GitSignsChangeDelete guifg=#cb4b16 guibg=#002b36
 ]])
+
+-- nvim-tree colors
+vim.cmd([[
+  " Customize directory color
+  highlight NvimTreeFolderIcon guifg=#268bd2
+
+  " Customize file color
+  highlight NvimTreeFolderName guifg=#839496
+
+  " Ensure the background for the tree is consistent
+  highlight NvimTreeNormal guibg=#002b36
+
+  " Customize opened folder color
+  highlight NvimTreeOpenedFolderName guifg=#93a1a1
+
+  " Customize git status colors
+  highlight NvimTreeGitDirty guifg=#b58900
+  highlight NvimTreeGitStaged guifg=#859900
+  highlight NvimTreeGitMerge guifg=#cb4b16
+  highlight NvimTreeGitRenamed guifg=#6c71c4
+  highlight NvimTreeGitNew guifg=#2aa198
+  highlight NvimTreeGitDeleted guifg=#dc322f
+
+  " Optionally, set the background for other elements as well
+  highlight NvimTreeVertSplit guibg=#002b36 guifg=#002b36
+  highlight NvimTreeEndOfBuffer guibg=#002b36
+]])

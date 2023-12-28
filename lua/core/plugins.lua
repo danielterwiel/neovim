@@ -30,6 +30,9 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
+	-- nvim-web-devicons: File icons
+	use("nvim-tree/nvim-web-devicons")
+
 	-- lualine: Status line
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -41,10 +44,10 @@ return require("packer").startup(function(use)
 
 	-- nvim-tree: File explorer
 	use({
-		"kyazdani42/nvim-tree.lua",
+		"nvim-tree/nvim-tree.lua",
 		requires = {
 			-- file icons
-			"kyazdani42/nvim-web-devicons",
+			"nvim-tree/nvim-web-devicons",
 		},
 	})
 

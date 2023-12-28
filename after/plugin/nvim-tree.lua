@@ -1,4 +1,12 @@
+-- Ensure nvim-web-devicons is loaded
+require("nvim-web-devicons").setup({
+	-- your web-devicons' options here
+	default = true,
+})
+
+-- Advanced configuration for nvim-tree
 require("nvim-tree").setup({
+	-- Update the nvim-tree configuration to your liking:
 	disable_netrw = true,
 	hijack_netrw = true,
 	open_on_tab = false,
@@ -40,5 +48,19 @@ require("nvim-tree").setup({
 	trash = {
 		cmd = "trash",
 		require_confirm = true,
+	},
+	renderer = {
+		indent_markers = {
+			enable = true, -- Enable indent markers
+		},
+		icons = {
+			padding = " ", -- Increase padding for icons
+			glyphs = {
+				folder = {
+					arrow_open = "→", -- Add padding to the open arrow
+					arrow_closed = "↓", -- Add padding to the closed arrow
+				},
+			},
+		},
 	},
 })
