@@ -39,7 +39,7 @@ vim.cmd([[
 
   highlight TelescopeMatching guifg=#93a1a1
   
-    " Adjusting title, prompt, etc.
+  " Adjusting title, prompt, etc.
   highlight TelescopeTitle guifg=#268bd2 guibg=#002b36
   highlight TelescopePromptPrefix guifg=#cb4b16 guibg=#002b36
   highlight TelescopePromptCounter guifg=#2aa198 guibg=#002b36
@@ -51,14 +51,52 @@ vim.cmd([[
 ]])
 
 -- nvim-lspconfig
-vim.cmd [[
+vim.cmd([[
   highlight DiagnosticError guifg=#dc322f
   highlight DiagnosticWarn guifg=#b58900
   highlight DiagnosticInfo guifg=#268bd2
   highlight DiagnosticHint guifg=#2aa198
-]]
+]])
 
-
+-- unadded line number indicator (~) color
 vim.cmd([[
-  " Grey color from Solarized palette
-  highlight NonText guifg=#586e75  ]])
+  highlight NonText guifg=#586e75 
+  
+  highlight LineNr guifg=#586e75 guibg=#002b36
+  highlight CursorLineNr guifg=#93a1a1 guibg=#002b36
+]])
+
+-- bufferline Solarized scheme
+vim.cmd([[
+  " Active buffer
+  highlight BufferLineBufferSelected guifg=#93a1a1 guibg=#002b36
+
+  " Inactive buffer
+  highlight BufferLineBuffer guifg=#586e75 guibg=#073642
+
+  " Buffer separators, modified background to match Solarized Dark
+  highlight BufferLineSeparator guifg=#073642 guibg=#002b36
+
+  " Bufferline background
+  highlight BufferLineBackground guifg=#586e75 guibg=#002b36
+
+  " Close buttons
+  highlight BufferLineCloseButton guifg=#586e75 guibg=#002b36
+  highlight BufferLineCloseButtonVisible guifg=#586e75 guibg=#073642
+  highlight BufferLineCloseButtonSelected guifg=#93a1a1 guibg=#002b36
+
+  " Modified buffer indicator
+  highlight BufferLineModified guifg=#b58900 guibg=#073642
+  highlight BufferLineModifiedVisible guifg=#b58900 guibg=#073642
+  highlight BufferLineModifiedSelected guifg=#b58900 guibg=#002b36
+
+  " Tab indicators
+  highlight BufferLineTab guifg=#586e75 guibg=#073642
+  highlight BufferLineTabSelected guifg=#93a1a1 guibg=#002b36
+  highlight BufferLineTabClose guifg=#dc322f guibg=#002b36
+
+  " Numbers and indicators
+  highlight BufferLineIndicatorSelected guifg=#2aa198 guibg=#002b36
+  highlight BufferLineNumbers guifg=#586e75 guibg=#073642
+  highlight BufferLineNumbersSelected guifg=#93a1a1 guibg=#002b36
+]])
