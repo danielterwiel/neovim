@@ -78,8 +78,6 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-buffer") -- Buffer completions
 	use("hrsh7th/cmp-path") -- Path completions
 	use("hrsh7th/cmp-cmdline") -- Command line completions
-	use("hrsh7th/cmp-vsnip") -- Snippet completions
-	use("hrsh7th/vim-vsnip") -- Snippet engine
 	use("onsails/lspkind-nvim") -- Adds vscode-like pictograms to nvim-cmp
 
 	-- copilot: GitHub Copilot

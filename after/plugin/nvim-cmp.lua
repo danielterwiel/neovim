@@ -1,4 +1,5 @@
 local cmp = require("cmp")
+local lspkind = require("lspkind")
 
 cmp.setup({
 	snippet = {
@@ -15,21 +16,16 @@ cmp.setup({
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	}),
 	sources = cmp.config.sources({
-		{ name = "cmdline" },
 		{ name = "nvim_lsp" },
-		{ name = "nvim-cmp" },
-		{ name = "cmp-nvim-lsp" },
-		{ name = "cmp-buffer" },
-		{ name = "cmp-path" },
-		{ name = "cmp-cmdline" },
-		{ name = "cmp-vsnip" },
-		{ name = "vim-vsnip" },
-		{ name = "onsails/lspkind-nvim" },
-	}, {
 		{ name = "buffer" },
+		{ name = "path" },
+		{ name = "cmdline" },
 	}),
 	formatting = {
-		format = require("lspkind").cmp_format({ with_text = true, maxwidth = 50 }),
+		format = lspkind.cmp_format({ -- Use lspkind for pictograms
+			with_text = true,
+			maxwidth = 50,
+		}),
 	},
 	view = {
 		entries = { name = "custom", selection_order = "near_cursor" },
