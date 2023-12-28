@@ -16,7 +16,17 @@ null_ls.setup({
 	on_attach = on_attach,
 	sources = {
 		null_ls.builtins.formatting.prettier.with({
-			filetypes = { "javascript", "typescript", "css", "html", "json", "yaml", "markdown" },
+			filetypes = {
+				"javascript",
+				"typescript",
+				"typescriptreact",
+				"javascriptreact",
+				"css",
+				"html",
+				"json",
+				"yaml",
+				"markdown",
+			},
 		}),
 
 		-- Stylua for Lua files
