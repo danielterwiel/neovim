@@ -76,6 +76,9 @@ return require("packer").startup(function(use)
 	use("hrsh7th/vim-vsnip") -- Snippet engine
 	use("onsails/lspkind-nvim") -- Adds vscode-like pictograms to nvim-cmp
 
+	-- copilot: GitHub Copilot
+	use 'github/copilot.vim'
+
 	-- Comment: easy commenting
 	use({
 		"numToStr/Comment.nvim",
