@@ -31,7 +31,10 @@ return require("packer").startup(function(use)
 	})
 
 	-- lualine: Status line
-	use("nvim-lualine/lualine.nvim")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
 
 	-- bufferline: Tab line
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
