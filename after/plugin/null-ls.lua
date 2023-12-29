@@ -27,7 +27,6 @@ null_ls.setup({
 				"yaml",
 				"markdown",
 			},
-			extra_args = { "--single-quote", "--jsx-single-quote" },
 		}),
 
 		-- Stylua for Lua files
