@@ -17,8 +17,8 @@ return require("packer").startup(function(use)
 	-- Plugins
 	--
 
-	-- vim-colors-solarized: Solarized theme
-	use("altercation/vim-colors-solarized")
+	-- onedark: Theme
+	use("navarasu/onedark.nvim")
 
 	-- treesitter: Code syntax highlighter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })

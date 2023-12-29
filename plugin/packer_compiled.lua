@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/dani/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/dani/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/dani/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -173,11 +178,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dani/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-colors-solarized"] = {
-    loaded = true,
-    path = "/Users/dani/.local/share/nvim/site/pack/packer/start/vim-colors-solarized",
-    url = "https://github.com/altercation/vim-colors-solarized"
   },
   ["vim-fugitive"] = {
     loaded = true,
