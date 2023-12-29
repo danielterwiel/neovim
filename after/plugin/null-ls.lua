@@ -33,3 +33,13 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 	},
 })
+
+-- format on save
+vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+	group = "FormatAutogroup",
+	pattern = "*", -- Adjust the pattern to target specific file types if needed
+	callback = function()
+		vim.lsp.buf.format({ async = false })
+	end,
+})
