@@ -23,10 +23,12 @@ return require("packer").startup(function(use)
 	-- treesitter: Code syntax highlighter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
+	-- plenary: Lua functions
+	use("nvim-lua/plenary.nvim")
+
 	-- telescope: File explorer
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.5",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
@@ -40,7 +42,7 @@ return require("packer").startup(function(use)
 	})
 
 	-- bufferline: Tab line
-	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+	use({ "akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- nvim-tree: File explorer
 	use({
@@ -84,12 +86,7 @@ return require("packer").startup(function(use)
 	use("github/copilot.vim")
 
 	-- Comment: easy commenting
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	})
+	use({ "numToStr/Comment.nvim" })
 
 	-- vim-visual-multi: mutli-cursor functionality
 	use("mg979/vim-visual-multi")
