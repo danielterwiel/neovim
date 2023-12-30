@@ -38,9 +38,30 @@ null_ls.setup({
 
 -- format on save
 vim.api.nvim_create_augroup("FormatAutogroup", { clear = true })
+
+-- Auto command for Prettier-supported file types
 vim.api.nvim_create_autocmd("BufWritePre", {
 	group = "FormatAutogroup",
-	pattern = "*", -- Adjust the pattern to target specific file types if needed
+	pattern = {
+		"javascript",
+		"typescript",
+		"typescriptreact",
+		"javascriptreact",
+		"css",
+		"html",
+		"json",
+		"yaml",
+		"markdown",
+	},
+	callback = function()
+		vim.lsp.buf.format({ async = false })
+	end,
+})
+
+-- Auto command for Lua files
+vim.api.nvim_create_autocmd("BufWritePre", {
+	group = "FormatAutogroup",
+	pattern = { "lua" },
 	callback = function()
 		vim.lsp.buf.format({ async = false })
 	end,
