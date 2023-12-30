@@ -15,7 +15,6 @@ end
 null_ls.setup({
 	on_attach = on_attach,
 	sources = {
-		-- prettier for formatting
 		null_ls.builtins.formatting.prettier.with({
 			filetypes = {
 				"javascript",
@@ -31,9 +30,7 @@ null_ls.setup({
 		}),
 
 		-- Stylua for Lua files
-		null_ls.builtins.formatting.stylua.with({
-			filetypes = { "lua" },
-		}),
+		null_ls.builtins.formatting.stylua,
 	},
 })
 
