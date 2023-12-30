@@ -29,7 +29,7 @@ return require("packer").startup(function(use)
 	-- telescope: File explorer
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
+		requires = { "nvim-lua/plenary.nvim" },
 	})
 
 	-- nvim-web-devicons: File icons

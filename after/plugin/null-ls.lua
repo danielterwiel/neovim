@@ -15,6 +15,8 @@ end
 null_ls.setup({
 	on_attach = on_attach,
 	sources = {
+
+		-- prettier for formatting
 		null_ls.builtins.formatting.prettier.with({
 			filetypes = {
 				"javascript",
@@ -29,8 +31,28 @@ null_ls.setup({
 			},
 		}),
 
+		-- eslint_d for linting and code quality
+		null_ls.builtins.diagnostics.eslint_d.with({
+			filetypes = {
+				"javascript",
+				"typescript",
+				"typescriptreact",
+				"javascriptreact",
+			},
+		}),
+		null_ls.builtins.code_actions.eslint_d.with({
+			filetypes = {
+				"javascript",
+				"typescript",
+				"typescriptreact",
+				"javascriptreact",
+			},
+		}),
+
 		-- Stylua for Lua files
-		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.stylua.with({
+			filetypes = { "lua" },
+		}),
 	},
 })
 
