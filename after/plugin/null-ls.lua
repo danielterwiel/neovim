@@ -30,7 +30,9 @@ null_ls.setup({
 		}),
 
 		-- Stylua for Lua files
-		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.stylua.with({
+			filetypes = { "lua" },
+		}),
 	},
 })
 
