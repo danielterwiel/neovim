@@ -15,7 +15,6 @@ end
 null_ls.setup({
 	on_attach = on_attach,
 	sources = {
-
 		-- prettier for formatting
 		null_ls.builtins.formatting.prettier.with({
 			filetypes = {
@@ -28,24 +27,6 @@ null_ls.setup({
 				"json",
 				"yaml",
 				"markdown",
-			},
-		}),
-
-		-- eslint_d for linting and code quality
-		null_ls.builtins.diagnostics.eslint_d.with({
-			filetypes = {
-				"javascript",
-				"typescript",
-				"typescriptreact",
-				"javascriptreact",
-			},
-		}),
-		null_ls.builtins.code_actions.eslint_d.with({
-			filetypes = {
-				"javascript",
-				"typescript",
-				"typescriptreact",
-				"javascriptreact",
 			},
 		}),
 
