@@ -32,6 +32,7 @@ null_ls.setup({
 		-- Stylua for Lua files
 		null_ls.builtins.formatting.stylua.with({
 			filetypes = { "lua" },
+			extra_args = { "--priority=10" }, -- Stylelua still picks up json, despite the filetypes
 		}),
 	},
 })
