@@ -1,7 +1,7 @@
 require("themery").setup({
-  themes = {"onedark", "ayu"}, -- Your list of installed colorschemes
-  themeConfigFile = "~/.config/nvim/lua/settings/theme.lua", -- Described below
-  livePreview = true, -- Apply theme while browsing. Default to true.
+  themes = {"onedark", "kanagawa"},
+  themeConfigFile = "~/.config/nvim/lua/core/theme.lua",
+  livePreview = true, 
   themes = {{
     name = "Day",
     colorscheme = "kanagawa-lotus",
@@ -9,8 +9,13 @@ require("themery").setup({
   {
     name = "Night",
     colorscheme = "kanagawa-dragon",
-  }},
+  },
+  {
+    default = true,
+    name = "OneDark",
+    colorscheme = "onedark",
+  }
+  },
 })
 
--- setup must be called before loading
 vim.cmd("colorscheme kanagawa")
