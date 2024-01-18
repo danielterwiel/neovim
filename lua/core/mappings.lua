@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 -- toggle nvim-tree
-vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>x", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 -- Move line(s) down in normal and visual mode
 vim.api.nvim_set_keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
@@ -25,3 +25,5 @@ vim.g.VM_maps = {
 	["Add Cursor Down"] = "<C-j>",
 	["Add Cursor Up"] = "<C-k>",
 }
+
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
