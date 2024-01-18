@@ -17,8 +17,11 @@ return require("packer").startup(function(use)
 	-- Plugins
 	--
 
-	-- onedark: Theme
-	use("navarasu/onedark.nvim")
+	-- kanawaga: Theme
+	use "rebelot/kanagawa.nvim"
+	
+	-- themery: Theme manager
+	use('zaldih/themery.nvim')
 
 	-- treesitter: Code syntax highlighter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
