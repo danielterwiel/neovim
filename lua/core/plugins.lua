@@ -77,7 +77,10 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 
 	-- null-ls: LSP integration for prettier
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
+
+	-- prettier
+	use('MunifTanjim/prettier.nvim')
 
 	-- nvm-cmp: Autocomplete
 	use("hrsh7th/nvim-cmp") -- Autocompletion plugin

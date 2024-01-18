@@ -21,6 +21,7 @@ lspconfig.tsserver.setup({
 		["textDocument/formatting"] = function() end,
 	},
 })
+
 lspconfig.cssls.setup({
 	on_attach = on_attach,
 	-- override the default LSP formatting behavior
@@ -28,6 +29,7 @@ lspconfig.cssls.setup({
 		["textDocument/formatting"] = function() end,
 	},
 })
+
 lspconfig.html.setup({
 	on_attach = on_attach,
 	-- override the default LSP formatting behavior
@@ -35,6 +37,7 @@ lspconfig.html.setup({
 		["textDocument/formatting"] = function() end,
 	},
 })
+
 lspconfig.jsonls.setup({
 	on_attach = on_attach,
 	-- override the default LSP formatting behavior
