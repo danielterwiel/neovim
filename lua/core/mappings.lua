@@ -1,9 +1,6 @@
 -- easy to reach leader key
 vim.g.mapleader = " "
 
--- toggle nvim-tree
-vim.api.nvim_set_keymap("n", "<leader>x", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
-
 -- Move line(s) down in normal and visual mode
 vim.api.nvim_set_keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<A-j>", ":move '>+1<CR>gv=gv", { noremap = true, silent = true })

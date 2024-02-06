@@ -64,3 +64,37 @@ require("nvim-tree").setup({
 		},
 	},
 })
+
+
+local api = vim.api
+
+-- Function to check if nvim-tree is open
+local function is_nvim_tree_open()
+  for _, win in pairs(api.nvim_list_wins()) do
+    if vim.bo[api.nvim_win_get_buf(win)].ft == 'NvimTree' then
+      return true, win
+    end
+  end
+  return false, nil
+end
+
+-- Function to toggle nvim-tree
+local function toggle_nvim_tree()
+  local is_open, win = is_nvim_tree_open()
+  if is_open then
+    -- If nvim-tree is open, check if it's focused
+    if api.nvim_get_current_win() == win then
+      -- If focused, close it
+      vim.cmd('NvimTreeClose')
+    else
+      -- If not focused, focus it
+      api.nvim_set_current_win(win)
+    end
+  else
+    -- If nvim-tree is not open, open it
+    vim.cmd('NvimTreeOpen')
+  end
+end
+
+-- Keybinding for <leader>x to toggle nvim-tree based on its state
+vim.api.nvim_set_keymap('n', '<leader>x', '', {noremap = true, silent = true, callback = toggle_nvim_tree})
